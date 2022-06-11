@@ -1,0 +1,39 @@
+1  docker build . -t my-flask
+   docker run 363  (by IMAGE ID)
+   docker ps -a
+   docker stop 4d  (by CONTAINER ID)
+   docker start -i 4d
+   docker attach 4d
+   docker inspect 4d
+   docker logs 4d
+   docker build . -t my-flask_new
+   docker ps -a
+   docker run 60
+
+2  In first terminal:
+   docker run -it --name my_story ubuntu
+   echo "Your story" > story.txt
+   apt-get install cowsay
+   cat story.txt|cowsay
+   bash: cowsay: command not found
+   cat story.txt|./usr/games/cowsay
+ ____________
+< Your story >
+ ------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+
+   In second terminal:
+   docker run -it --name my_story_2 ubuntu
+   ls
+   bin   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var
+   boot  etc  lib   lib64  media   opt  root  sbin  sys  usr
+   cowsay
+   bash: cowsay: command not found
+   ./usr/games/cowsay
+   bash: ./usr/games/cowsay: No such file or directory
